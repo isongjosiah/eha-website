@@ -1,8 +1,7 @@
-baseURL = "http://example.org/"
-languageCode = "en-us"
-title = "Alpha Church"
-theme = "alpha-church"
-themesDir = "../.."
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+theme = 'alpha-church'
 
 rssLimit = 5
 pagination.pagerSize = 4
@@ -187,4 +186,4 @@ enableEmoji = true
 
 [caches]
   [caches.images]
-    dir = ':cacheDir/images'
+ 
