@@ -1,0 +1,12 @@
+<div class="iframe-container">
+  <iframe
+    width="{{ with .Get "width" }}{{ . }}{{ else }}1150{{ end }}"
+    height="{{ with .Get "height" }}{{ . }}{{ else }}400px{{ end }}"
+    style="border:0"
+    loading="lazy"
+    allowfullscreen
+    referrerpolicy="no-referrer-when-downgrade"
+    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCrCkLLBYDbYsoiORLb6H8-gQx6hm9D_nU
+      &q=Space+Needle,Seattle+WA">
+  </iframe>
+</div>
