@@ -1,6 +1,6 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = "Elyon's Heirs Assembly"
 theme = 'alpha-church'
 
 rssLimit = 5
@@ -106,8 +106,8 @@ enableEmoji = true
   [params.banner]
     image = "img/banner.jpg"
 
-#  [params.style]
-#    googleFonts = ["Cardo", "Crimson+Text", "Merriweather", "Playfair+Display:400,700", "Roboto+Slab"]
+  [params.style]
+    googleFonts = ["Cardo", "Crimson+Text", "Merriweather", "Playfair+Display:400,700", "Roboto+Slab"]
 
   [params.podcast]
     title = "Listen to Alpha Church"

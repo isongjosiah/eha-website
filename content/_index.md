@@ -1,4 +1,10 @@
 +++
+[pagebanner]
+  enable = true
+  image = "/img/banner.jpg"
+  heading = "Welcome to Our Church"
+  paragraph = "A community dedicated to faith, hope, and love."
+
 [banner]
   [[banner.button]]
       url = "/contact"
