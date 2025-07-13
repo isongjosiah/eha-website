@@ -13,6 +13,15 @@
 [services]
   title = "Church on Sunday"
   text = "We meet at 9:30 am  at [103 St Finbarr's College Rd, Akoka, Lagos 102216, Lagos](https://www.google.com/maps/place/103+St+Finbarr's+College+Rd,+Akoka,+Lagos+102216,+Lagos/@6.5316584,3.383297,17z/data=!4m15!1m8!3m7!1s0x103b8d04dd2b7f4b:0x1a3b00177b8e36ad!2s103+St+Finbarr's+College+Rd,+Akoka,+Lagos+102216,+Lagos!3b1!8m2!3d6.5316531!4d3.3881679!16s%2Fg%2F11rzr53tqt!3m5!1s0x103b8d04dd2b7f4b:0x1a3b00177b8e36ad!8m2!3d6.5316531!4d3.3881679!16s%2Fg%2F11rzr53tqt?entry=ttu&g_ep=EgoyMDI1MDYyMy4yIKXMDSoASAFQAw%3D%3D)."
+<iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.359223192078!2d3.385317374786227!3d6.60333399338692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8cc382e75397%3A0xc3911f9775071191!2s103%20St%20Finbarr&#39;s%20College%20Rd%2C%20Akoka%2C%20Lagos!5e0!3m2!1sen!2sng!4v1700000000000!5m2!1sen!2sng"
+  width="600"
+  height="450"
+  style="border:0;"
+  allowfullscreen=""
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
 
 [feature_icons]
   #These feature icons look best if there's an even number of them.
