@@ -1,0 +1,102 @@
+<!-- layouts/_partials/map.html -->
+{{ $service := site.Params.Map.service }}
+
+<div id="{{ .id }}" class="box map"></div>
+
+
+  {{ if eq $service "osm" }}
+
+    <script>
+        var loc = [{{- float (index ( index .points 0) "latitude") -}}, {{-
+				float (index ( index .points 0) "longitude") -}}];
+		var mymap = L.map("{{- .id -}}").setView(loc, {{- int .zoom -}});
+        L.tileLayer(
+          "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+          {
+            attribution:
+              'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+              maxZoom: {{- int .zoom -}}
+            }
+        ).addTo(mymap);
+		{{- range .points -}}
+		L.marker([{{.latitude}},{{.longitude}}]).addTo(mymap);
+		{{- end -}}
+    </script>
+  {{ else if eq $service "google" }}
+
+    {{ "<!-- Google Map -->" | safeHTML }}
+    <script>
+        let map;
+        let centre = {lat: {{- float (index ( index .points 0) "latitude") -}}, lng: {{- float (index ( index .points 0) "longitude") -}}};
+        
+        async function initMap() {
+          const { Map } = await google.maps.importLibrary("maps");
+
+          map = new Map(document.getElementById('{{- .id -}}'), {
+            center: centre,
+            zoom: {{- float .zoom -}}
+          });
+
+          marker = new google.maps.Marker({position: centre, map: map});
+			    
+        }
+        initMap();
+      </script> 
+  {{ else if eq $service "mapbox" }}
+    {{ printf "<meta name=\"viewport\" content=\"initial-scale=1,maximum-scale=1,user-scalable=no\" />" | safeHTML }}
+    {{ printf "<script src=\"https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js\"></script>" | safeHTML }}
+    {{ printf "<link href=\"https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css\" rel=\"stylesheet\" />" | safeHTML }}
+    <style>
+      body { margin: 0; padding: 0; }
+      #map { top: 0; bottom: 0; padding: 0; width: 100%; }
+    </style>
+    <script>
+      var loc = [{{- float (index ( index .points 0) "latitude") -}}, {{- float (index ( index .points 0) "longitude") -}}];
+      mapboxgl.accessToken = "{{- .api_key -}}";
+
+      var geojson = {
+        type: 'FeatureCollection',
+        features: [{
+          type: 'Feature',
+          geometry: {
+            type: 'Point',
+            coordinates: [{{- float .longitude -}}, {{- float .latitude -}}],
+          },
+          properties: {
+            title: "{{- .marker_title -}}",
+            description: "{{- .marker_address -}}"
+          }
+        }]
+      };
+
+      var map = new mapboxgl.Map({
+        container: 'map', // container id
+        style: "{{- safeHTML .style_url  -}}", // stylesheet location
+        center: loc, // starting position [lng, lat]
+        zoom: {{- int .zoom -}} // starting zoom
+      });
+
+      // add markers to map
+      geojson.features.forEach(function(marker) {
+
+      // create a HTML element for each feature
+      var el = document.createElement('div');
+      el.className = 'marker';
+
+      // make a marker for each feature and add to the map
+      new mapboxgl.Marker(el)
+        .setLngLat(marker.geometry.coordinates)
+        .addTo(map);
+
+      if (marker.properties.title || marker.properties.description) {
+        new mapboxgl.Marker(el)
+          .setLngLat(marker.geometry.coordinates)
+          .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+            .setHTML('<h4>' + marker.properties.title + '</h4><div>' + marker.properties.description + '</div>'))
+          .addTo(map);
+      }
+      });
+
+      map.addControl(new mapboxgl.NavigationControl());
+    </script>
+  {{ end }}

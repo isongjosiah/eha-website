@@ -74,9 +74,6 @@
     <loc>http://localhost:1313/leaders/</loc>
     <lastmod>2018-04-30T14:27:13+10:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
-    <lastmod>2018-04-30T10:05:49+10:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/posts/style-guide/</loc>
     <lastmod>2017-11-14T10:57:55-05:00</lastmod>
   </url><url>
@@ -112,5 +109,7 @@
   </url><url>
     <loc>http://localhost:1313/posts/migrate-from-jekyll/</loc>
     <lastmod>2014-03-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/about/</loc>
   </url>
 </urlset>

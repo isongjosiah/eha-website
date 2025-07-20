@@ -23,7 +23,27 @@
 
 		<link rel="stylesheet" href="http://localhost:1313/fontawesome/css/all.min.css" />
 		
-		<link rel="stylesheet" href="/style.main.min.033cc7334ef066a4cfa1020fb6ca10214aa5a823ece7be85da34f2bc08288827.css" integrity="sha256-AzzHM07wZqTPoQIPtsoQIUqlqCPs576F2jTyvAgoiCc=" media="screen" crossorigin="anonymous" /><link rel="stylesheet" href="http://localhost:1313/example.css"></head>
+		<link rel="stylesheet" href="/style.main.min.3192feaa62c7de6edecfc42a8ebd95acae3f9cf5d2d0b77683f699488a9f3127.css" integrity="sha256-MZL&#43;qmLH3m7ez8Qqjr2VrK4/nPXS0Ld2g/aZSIqfMSc=" media="screen" crossorigin="anonymous" /><link rel="stylesheet" href="http://localhost:1313/example.css">
+
+
+
+
+
+
+    
+    
+    
+    <!-- Google Map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrCkLLBYDbYsoiORLb6H8-gQx6hm9D_nU&loading=async&callback=initMap" defer></script>
+
+
+		
+			<script async
+				src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap">
+			</script>
+		
+	</head>
+
 
 <body  class="landing"  >
   <div id="page-wrapper">
@@ -53,12 +73,10 @@
                           
                             <li><a href="/about">About Us</a></li>
                           
-                          </li>
                       
                           
                             <li><a href="/leaders">Leaders</a></li>
                           
-                          </li>
                       
                     </ul>
                   </li>
@@ -81,13 +99,12 @@
                                 <li><a href="/preachers">Preachers</a></li>
                               
                               </ul>
+                            </li>
                           
-                          </li>
                       
                           
                             <li><a href="/posts">Blog</a></li>
                           
-                          </li>
                       
                     </ul>
                   </li>
@@ -104,6 +121,7 @@
         </ul>
       </nav>
     </header>
+
 
 <section id="banner">
   <h2>Elyon&#39;s Heirs Assembly</h2>
@@ -127,20 +145,33 @@
 							<h2>Church on Sunday</h2><a name="services"></a>
 							<p>We meet at 9:30 am  at <a href="https://www.google.com/maps/place/103+St+Finbarr's+College+Rd,+Akoka,+Lagos+102216,+Lagos/@6.5316584,3.383297,17z/data=!4m15!1m8!3m7!1s0x103b8d04dd2b7f4b:0x1a3b00177b8e36ad!2s103+St+Finbarr's+College+Rd,+Akoka,+Lagos+102216,+Lagos!3b1!8m2!3d6.5316531!4d3.3881679!16s%2Fg%2F11rzr53tqt!3m5!1s0x103b8d04dd2b7f4b:0x1a3b00177b8e36ad!8m2!3d6.5316531!4d3.3881679!16s%2Fg%2F11rzr53tqt?entry=ttu&amp;g_ep=EgoyMDI1MDYyMy4yIKXMDSoASAFQAw%3D%3D">103 St Finbarr&rsquo;s College Rd, Akoka, Lagos 102216, Lagos</a>.</p>
 						</header>
+                        
 						
-<div class="map-container" style="margin-top: 2rem;">
-  <iframe
-  width="1150"
-  height="450"
-  style="border:0"
-  loading="lazy"
-  allowfullscreen
-  referrerpolicy="no-referrer-when-downgrade"
-  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCrCkLLBYDbYsoiORLb6H8-gQx6hm9D_nU
-    &q=103+St+Finbar's+College+Rd,+Akoka+Lagos">
-</iframe>
-</div>
 
+
+<div id="map_main" class="box map"></div>
+
+
+  
+
+    <!-- Google Map -->
+    <script>
+        let map;
+        let centre = {lat: 48.853 , lng: 2.3498 };
+        
+        async function initMap() {
+          const { Map } = await google.maps.importLibrary("maps");
+
+          map = new Map(document.getElementById('map_main'), {
+            center: centre,
+            zoom: 18 });
+
+          marker = new google.maps.Marker({position: centre, map: map});
+			    
+        }
+        initMap();
+      </script> 
+  
 
 					</section>
 					
@@ -204,8 +235,8 @@
 								<div class="col-6 col-12-narrower">
 									<section class="box special">
 										<span class="image featured"><img src="http://localhost:1313/img/freely-10057.jpg" alt="" /></span>
-										<h3>Childrens&#39; Ministry</h3>
-										<p>A church for the family.</p>
+										<h3>School Fellowships</h3>
+										<p>A church for the Schools.</p>
 										
 											<ul class="actions special">
 												<li><a href="http://localhost:1313/kids" class="button alt">Learn more</a></li>
@@ -241,6 +272,7 @@
 					<h2>Get in touch!</h2>
 					<p>We&#39;d love to hear from you.</p>
 					
+
 
 	<form name="contact" method="POST" action="/contact_thanks" netlify>
 		<div class="row gtr-50 gtr-uniform">
@@ -302,7 +334,7 @@
 
 </div>
 
-<!-- Scripts -->
+<!-- layouts/_partials/scripts.html -->
 
 
 
