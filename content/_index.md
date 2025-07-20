@@ -62,7 +62,7 @@ map_location = "Cathédrale Notre-Dame de Paris"
   [[feature_images.tile]]
     image = "img/freely-10057.jpg"
     title = "School Fellowships"
-    text = "A church for the Schools."
+    text = "A church for the youth."
     url = "/kids"
     button_text = "Learn more"
 
