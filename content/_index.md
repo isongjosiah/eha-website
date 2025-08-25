@@ -19,7 +19,7 @@
 [services]
   title = "Church on Sunday"
   text = "We meet at 9:30 am  at [103 St Finbarr's College Rd, Akoka, Lagos 102216, Lagos](https://www.google.com/maps/place/103+St+Finbarr's+College+Rd,+Akoka,+Lagos+102216,+Lagos/@6.5316584,3.383297,17z/data=!4m15!1m8!3m7!1s0x103b8d04dd2b7f4b:0x1a3b00177b8e36ad!2s103+St+Finbarr's+College+Rd,+Akoka,+Lagos+102216,+Lagos!3b1!8m2!3d6.5316531!4d3.3881679!16s%2Fg%2F11rzr53tqt!3m5!1s0x103b8d04dd2b7f4b:0x1a3b00177b8e36ad!8m2!3d6.5316531!4d3.3881679!16s%2Fg%2F11rzr53tqt?entry=ttu&g_ep=EgoyMDI1MDYyMy4yIKXMDSoASAFQAw%3D%3D)."
-map_location = "Cathédrale Notre-Dame de Paris"
+map_location = "University Of Lagos"
 
 [feature_icons]
   #These feature icons look best if there's an even number of them.
