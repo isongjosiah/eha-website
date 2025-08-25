@@ -125,7 +125,7 @@ enableEmoji = true
     latitude = "6.53187"
     longitude = "3.38814"
     zoom = "18"
-    google_api_key = "AIzaSyAn66BNTWnfpI3BnOwZLk9JkrXRrKmVk7Q"
+    google_api_key = "AIzaSyBtMU7SDlYzdQrsOs1LVVuO8pE9q0-c0g4"
     #language = "fr" #Optional
     #region = "FR" #Optional
 
